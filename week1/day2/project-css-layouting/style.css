@@ -1,0 +1,12 @@
+header{
+    height: 200px;
+    font-size: 20px;
+}
+body {
+  background-image: url("img/back.png");
+  background-position: center;
+	line-height: 1.4em;
+	margin: 0px;
+}
+ 
+ 
