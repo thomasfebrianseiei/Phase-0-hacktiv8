@@ -15,11 +15,16 @@ for (counter = 1 ; counter <= rows1 ; counter++){
 // dengan function
 console.log('dengan function')
 function asterik(counter,rows1){
-  for (var i = counter ; counter <= rows1 ; counter++){
-    console.log ("*")
+  var bintang = ''
+  for (var i = counter ; i <= rows1 ; i++){
+    bintang += "*";
+    if (i < rows1){
+    bintang +='\n'
+    }
   }
+  return bintang
 }
-asterik(1,5)
+console.log(asterik(1,5))
 
 
 // 2. Menyusun Barisan Bintang Dengan Nested Looping
@@ -42,15 +47,20 @@ for (var i = 1; i <= rows2 ; i++) {
 // dengan function
 console.log('dengan function')
 function print5 (rows2) {
+    var asteriks = '';
     for (var i = 1; i <= rows2 ; i++) {
-      var asteriks = '*';
-      for (var j = 2; j <= rows2 ; j++) {
-      asteriks = asteriks + '*';
+      for (var j = 1; j <= rows2 ; j++) {
+      asteriks += '*';
+        if (i < rows2  && j % rows2 === 0) {
+        asteriks +='\n'
+        }
       }
-    console.log(asteriks);
     }
+    return asteriks
   }
-print5 (5)
+
+  
+console.log(print5(5))
 
 // 3. Menyusun Barisan Tangga Bintang Dengan Nested Looping
 // Problem
@@ -65,7 +75,7 @@ var rows3 =5;
 for (var i = 1; i <= rows3; i++) {
   var output = '';
   for (var j = 1; j <= i; j++) {
-    output+= '*';
+    output+= '* ';
   }
 	console.log(output);
 }
@@ -73,12 +83,15 @@ for (var i = 1; i <= rows3; i++) {
 // dengan function
 console.log('dengan function')
 function printSegitiga(rows3) {
+  var output ='';
   for (var i = 1; i <= rows3; i++) {
-  var output = '';
     for (var j = 1; j <= i; j++) {
-    output+= '*';
-	}
-	console.log(output);
+    output += '* ';
+      if (i < rows3  && j % i === 0) {
+      output +='\n'
+      }
+	  }
   }
+  return output;
 }
-printSegitiga(5)
+console.log(printSegitiga(5))
