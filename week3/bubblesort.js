@@ -32,23 +32,23 @@
 //   return arr2;
 // }
 function bubbleSort(arr) {
-    //loop untuk length
-    var loop = arr.length;  
-    //loop untuk loop length
-    for(var i = 0; i < loop; i++) {
-      //cycle arr items
-      for(var j = 0; j < loop; j++) {
-        //compare items
-        if(arr[j] > arr[j+1]) {
-          //swap
-          var temp = arr[j];
-          arr[j] = arr[j+1];
-          arr[j+1] = temp;
-        }
+  //loop untuk length
+  var loop = arr.length;  
+  //loop untuk loop length
+  for(var i = 0; i < loop; i++) {
+    //cycle arr items
+    for (var j = 0; j < (loop - i - 1); j++) { 
+      //Compare the adjacent positions
+      if(arr[j] > arr[j+1]) {
+        //swap
+        var temp = arr[j];
+        arr[j] = arr[j+1];
+        arr[j+1] = temp;
       }
     }
-    
-  return arr;
+  }
+  
+return arr;
 }
 
 console.log(bubbleSort([4, 25, 1, 6, 2])); // [ 1, 2, 4, 6, 25 ]
